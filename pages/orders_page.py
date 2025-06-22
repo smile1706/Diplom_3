@@ -8,8 +8,6 @@ class OrdersPage(BasePage):
     @allure.step("Клик на раздел «Конструктор»")
     def click_on_constructor_page_button(self):
         self.click_on_element(OrdersPageLocators.CONSTRUCTOR_BUTTON_HEADER)
-        from .main_page import MainPage
-        return MainPage(self.driver)
 
     @allure.step("Подождать видимости данных на странице заказов")
     def wait_for_orders_page_data_visibility(self):

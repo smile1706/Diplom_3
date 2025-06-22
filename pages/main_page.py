@@ -1,9 +1,7 @@
 import allure
 
 from locators.main_page_locators import MainPageLocators
-from pages.auth_page import AuthPage
 from pages.base_page import BasePage
-from pages.orders_page import OrdersPage
 
 
 class MainPage(BasePage):
@@ -47,12 +45,10 @@ class MainPage(BasePage):
     @allure.step("Клик на раздел «Лента заказов»")
     def click_on_order_list_page_button(self):
         self.click_on_element(MainPageLocators.ORDER_LIST_BUTTON_HEADER)
-        return OrdersPage(self.driver)
 
     @allure.step("Клик на кнопку Войти в аккаунт")
     def click_on_login_page_button(self):
         self.click_on_element(MainPageLocators.LOGIN_PAGE_BUTTON)
-        return AuthPage(self.driver)
 
     @allure.step("Клик на ингредиент")
     def click_on_ingredient(self,path_index,ingredient_index):

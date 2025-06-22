@@ -18,5 +18,3 @@ class AuthPage(BasePage):
         self.send_keys_to_input(AuthPageLocators.EMAIL, email)
         self.send_keys_to_input(AuthPageLocators.PASSWORD, password)
         self.click_on_element(AuthPageLocators.LOGIN_BUTTON_AT_AUTH_PAGE)
-        from .main_page import MainPage
-        return MainPage(self.driver)
